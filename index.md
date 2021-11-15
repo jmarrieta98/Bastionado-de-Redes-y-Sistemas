@@ -1,1 +1,1 @@
-#Página principal del módulo Bastionado de redes y Sistemas
+Página principal del módulo Bastionado de redes y Sistemas
