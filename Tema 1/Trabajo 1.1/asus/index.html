@@ -1,0 +1,75 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Bastionado del arranque del sistema de Asus GL752VW</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="asus"
+                  title="Bastionado del arranque del sistema de Asus GL752VW"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Inicio" duration="0">
+        <p>Para acceder a la BIOS tendremos presionar el botón F2 a la hora de iniciar el sistema. </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Contraseña de usuario o Power-On" duration="0">
+        <p>Si queremos que al iniciar el sistema este nos pida una contraseña para acceder, tendremos que ir a la pestaña <strong>Security</strong> de la BIOS y en la opción <strong>User Password</strong> nos pedirá escribir una contraseña. <img alt="Contraseña de usuario" src="img\\3410a8a24f7fe9f4.jpg">  </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Contraseña de administrador" duration="0">
+        <p>Si queremos que al acceder a la BIOS nos pida una contraseña, tendremos que acceder a la pestaña <strong>Security</strong> y en la opción <strong>Administrator Password</strong> nos pedirá escribir una contraseña. <img alt="Contraseña de administrador" src="img\\a6f73a6b03dd5811.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Arranques externos" duration="0">
+        <p>Para deshabilitar el arranque externo, en la pestaña <strong>Security</strong> accedemos a <strong>I/O Interface Security</strong> y luego a <strong>USB Interface Security</strong>, en dicha pestaña podemos bloquear los usb para que no puedan arrancar desde ellos. <img alt="Seguridad USB" src="img\\88dd12e15bc830ee.jpg">  </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Orden de arranque" duration="0">
+        <p>Para cambiar el orden de arranque tan solo tendremos que entrar en la pestaña <strong>Boot</strong> y en el apartado <strong>Boot Option Priorities</strong> podemos elegir que dispositivo arranca primero <img alt="Orden de arranque" src="img\\f8a355f90ba1780c.jpg">  </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Otras opciones de seguridad" duration="0">
+        <p>Dentro de <strong>Security</strong> tenemos la opción <strong>Secure Boot menu</strong> desde la cual podemos acceder a la variables del <strong>Secure Boot</strong> y podemos editarlas <img alt="Secure Boot" src="img\\858f5c8238db8cc7.jpg"><img alt="Key Management de Secure Boot" src="img\\df51b6535c06c51a.jpg"> También dentro de <strong>Security</strong> y <strong>I/O Interface Security</strong> podemos bloquear la interfaz de red y disco óptico entre otros. <img alt="Bloquear interfaces varias" src="img\\316135429ec46465.jpg"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

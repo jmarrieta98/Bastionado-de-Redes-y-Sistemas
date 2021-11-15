@@ -1,0 +1,26 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-15T12:20:59+01:00",
+  "id": "asus",
+  "duration": 0,
+  "title": "Bastionado del arranque del sistema de Asus GL752VW",
+  "summary": "Hardening BIOS Asus GL752VW",
+  "source": "Asus GL752VW.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown",
+    "hardening",
+    "bios"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "asus"
+}
