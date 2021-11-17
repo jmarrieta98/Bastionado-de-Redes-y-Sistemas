@@ -1,0 +1,26 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-17T09:57:52+01:00",
+  "id": "lenovo",
+  "duration": 0,
+  "title": "Bastionado del arranque del sistema de Lenovo Ideapad Slim 9 14ITL5",
+  "summary": "Hardening BIOS Lenovo Ideapad Slim 9 14ITL5",
+  "source": "Lenovo Ideapad Slim 9 14ITL5.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown",
+    "hardening",
+    "bios"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "lenovo"
+}
