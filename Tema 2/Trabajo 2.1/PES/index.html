@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html lang="es">
+
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Protocolo de enrutamiento seguro</title>
+  <link rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="" id="PES" title="Protocolo de enrutamiento seguro" environment="web" feedback-link="">
+
+    <google-codelab-step label="Inicio" duration="0">
+      <p>Para empezar vamos a mostrar el suspuesto caso que vamos a realizar y a traves de esta guía y luego el
+        ejercicio correspondiente, conseguiremos proteger una red con el protocolo OSPFv2. El caso es el siguiente, hay
+        <strong>4</strong> departamentos que deben estar conectados entre si, para eso cada departamento tiene una
+        <strong>red propia</strong> y mediante el protocolo <strong>OSPF</strong> se comunicaran con los demás
+        departamentos. <img alt="Imagen del ejercicio" src="img\\b0699f6c8059457e.jpg"> </p>
+
+
+    </google-codelab-step>
+
+    <google-codelab-step label="IP estática en PCs" duration="0">
+      <p>Antes de poner una ip estática a cualquier pc tendremos que tener en cuenta que la <strong>primera ip</strong>
+        de la red de cada departamento será para el <strong>router</strong> y a partir de ahí podremos asignar las ip
+        restantes a los pcs que tengamos. Para asignar una ip al pc tendremos que clicar sobre el y este abrirá una
+        ventana, clicaremos en la pestaña <strong>desktop -&gt; IP Configuration</strong> y en el apartado IP
+        Congfiguration elegimos la opción Static e introducimos la ip correspondiente e nuestro caso sera
+        <strong>192.168.X.X</strong> y la marcara de red que será <strong>255.255.255.0</strong>, la puerta por defecto
+        será el router por lo que la ip será <strong>192.168.X.1</strong><img alt="Contraseña de usuario"
+          src="img\\96f6ec39b0406e16.jpg"></p>
+
+
+    </google-codelab-step>
+
+    <google-codelab-step label="Entrar al modo configuración de un router" duration="0">
+      <p>Para entrar en la consola del router deberemos de clicar en el y luego en la pestaña <strong>CLI</strong> se
+        abrirá la terminal. Para entrar en modo administrador deberemos de introducir <strong>en</strong> y luego para
+        la configuracion <strong>conf t</strong> a partir de aquí podremos configurar el router. <img
+          alt="Modo configuración cisco" src="img\\e70b086f0e0e73e3.jpg"> </p>
+
+
+    </google-codelab-step>
+
+    <google-codelab-step label="Asignar IPs a los puertos" duration="0">
+      <p>Una vez dentro del modo configuración para acceder a un puerto y darle una IP debremos de hacer lo siguiente
+        introduciremos el siguiente comando <strong>interface (NombreDelPuerto)</strong> en el caso del puerto hacia el
+        departamento sera <strong>gigabitEthernet0/0/0</strong> y para la comunicación entre departamentos
+        <strong>gigabitEthernet0/0/1</strong>, luego para asignar la ip usaremos el siguiente comando <strong>ip add
+          (IP)192.168.X.1 (Máscara)255.255.255.0</strong> Para salir de una interfaz o simplemente ir hacia atras
+        usaremos el comando <strong>exit</strong> y además debemos de activar el puerto porque por defecto está apagado,
+        con <strong>no sh</strong> el puerto se encenderá. </p>
+
+
+    </google-codelab-step>
+
+    <google-codelab-step label="Protocolo OSPF (Identificación)" duration="0">
+      <p>Para acceder al protocolo ospf tendremos que ir al modo configuración del router (Descrito anteriormente en las
+        diapositivas) y usaremos el comando <strong>router ospf id</strong> (En este caso puede ser 1) Para que no haya
+        confusiones vamos a darle una id especifica al router para el protocolo ospf, para ello deberemos de escribir el
+        siguiente comando dentro de la configuracion ospf <strong>router-id X.X.X.X</strong> Para entenderlo mejor
+        usaremos el tercer octeto de la red del departamento para asignarle un id por ejemplo <strong>1.1.1.1 </strong>
+      </p>
+
+
+    </google-codelab-step>
+
+    <google-codelab-step label="Protocolo OSPF (Configuración)" duration="0">
+      <p>Una vez dentro de la configuración de ospf debemos de añadir las redes de cada router a un area, en nuestro
+        caso seran al backbone (0 o 0.0.0.0) con el siguiente comando <strong>network 192.168.X.0 0.0.0.255(Máscara
+          inversa) area 0</strong> Una vez añadamos todas las redes de los routers ya estará configurado. </p>
+
+
+    </google-codelab-step>
+
+    <google-codelab-step label="Protocolo OSPF (Enrutamiento)" duration="0">
+      <p>Para ver si está correcto debemos de entrar en modo administrador en un router y escribir el siguiente comando
+        <strong>show ip ospf neighbor</strong> y <strong>show ip route</strong>, con dichos comandos veremos los vecinos
+        del router y las rutas que se han puesto gracias al protocolo ospf. <img alt="Validar OSPF"
+          src="img\\6ad7cf67bc674d2e.jpg"> </p>
+
+
+    </google-codelab-step>
+
+    <google-codelab-step label="Protocolo OSPF (Securización)" duration="0">
+      <p>Para activar la securización del protocolo ospf, deberemos de entrar en las interfaces que hayamos añadido y
+        meter el comando <strong>ip ospf message-disgest-key 1 mdr (Contraseña)</strong> y para activar la autenticación
+        <strong>ip ospf authentication message-digest</strong> Con esto habremos securizado la red y para comprobrar que
+        todo está bien podemos hacer el paso anterior para ver que lo vecinos y las rutas son correctas. </p>
+
+
+    </google-codelab-step>
+
+    <google-codelab-step label="Práctica OSPF" duration="0">
+      <p>En el siguiente enlace tendras el ejercicio para poder hacerlo en Cisco Packet Tracer. <a
+          href="../Practica2.pka">Ejercicio OSPF</a></p>
+
+
+    </google-codelab-step>
+
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+
+</html>

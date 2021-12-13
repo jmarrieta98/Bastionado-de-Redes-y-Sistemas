@@ -1,0 +1,26 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-12-13T16:34:50+01:00",
+  "id": "PES",
+  "duration": 0,
+  "title": "Protocolo de enrutamiento seguro",
+  "summary": "Protocolo de enrutamiento reguro",
+  "source": ".\\Protocolo de enrutamiento seguro.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown",
+    "hardening",
+    "networks"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "PES"
+}
