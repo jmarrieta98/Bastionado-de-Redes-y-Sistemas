@@ -1,0 +1,123 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Seguridad en routers domesticos</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="SRD"
+                  title="Seguridad en routers domesticos"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Inicio" duration="0">
+        <p>Esta guía sera de como securizar el router domestico de tp-link Archer C80. <img alt="Inicio" src="img\\3694cb846e8f6a.jpg">  </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="WPS" duration="0">
+        <p>El wps no es recomendado tenerlo activado, para ello nos iremos a <strong>Advanced-&gt;Wireless-&gt;WPS</strong> y deshabilitar el wps <img alt="WPS" src="img\\31d8f56be147995e.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Contraseñas por defecto" duration="0">
+        <p>Es muy importante cambiar las contraseñas por defecto, tanto para la administración como la del wifi. </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Administración local" duration="0">
+        <p>Para la administrción local debemos ir a <strong>Advanced-&gt;System-&gt;Administration</strong> En dicho apartado podemos cambiar la contraseña de administración por defecto y para la administración seleccionar unos dispositivos que puedan administrar. <img alt="Administracion local" src="img\\4025f90267c0133a.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Administración remota" duration="0">
+        <p>En caso de no poder acceder normalmente al router deberemos de activar la administración remota <strong>Advanced-&gt;System-&gt;Administration</strong> y configurar el puerto y los equipos específicos que pueden entrar a traves de la ip. <img alt="Administracion remota" src="img\\b194e5c53454c6b3.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="FIREWALL" duration="0">
+        <p>En cuanto al firewall ubicado en <strong>Advanced-&gt;Security-&gt;Firewall</strong> podemos activar el cortafuegos SPI y deshabilitar la opción de responder al ping tanto en WAN como en LAN. <img alt="FIREWALL" src="img\\1f910be6d891eb20.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="WIFI" duration="0">
+        <p>En caso del wifi lo primero que debemos hacer es cambiar las contraseñas por defecto. <strong>Advanced-&gt;Wireless-&gt;Guest Network</strong><img alt="WIFI" src="img\\5c78b2aebde36b7d.jpg">  </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="REDES WIFI OCULTAS" duration="0">
+        <p>Una medida de protección es ocultar el SSID a los demás dispositivos. Para ellos accederemos a <strong>Advanced-&gt;Wireless-&gt;Guest Network</strong> y en la bandas que tengamos activadas activaremos el <strong>Hide SSID</strong><img alt="Red oculta" src="img\\5c78b2aebde36b7d.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="WPA2" duration="0">
+        <p>Para mayor portección las contraseñas de wifi tiene que ser de tipo WPA2 asi que iremos a <strong>Advanced-&gt;Wireless-&gt;Guest Network</strong> y en la bandas activadas cambiaremos el <strong>Security</strong> a <strong>WPA/WPA2-Personal</strong><img alt="WPA2" src="img\\5c78b2aebde36b7d.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="UPnP" duration="0">
+        <p>En caso de estar jugando a juegos multijugador y en tiempo real deberemos de activar el UPnP, para ellos iremos a <strong>Advanced-&gt;Nat Forwarding-&gt;UPnP</strong> y lo activaremos. <img alt="UPnP" src="img\\ab3409239f08529.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Reenvío de puertos" duration="0">
+        <p>Una de las prácticas más habituales que cambiar el puerto por defecto de algunos servicios que estemos utilizando, o simplemente conectar el servicio al equipo indicado, para ellos accederemos a <strong>Advanced-&gt;Nat Forwarding-&gt;Port Forwarding</strong> en dicho apartamos daremos clic en <strong>add</strong> y se abrirá un ventana para crear un reenvio de puertos, una vez configurado le daremos a <strong>save</strong><img alt="Reenvio de puertos" src="img\\ef5509c414307447.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="IPv6" duration="0">
+        <p>En caso de no utilizar IPv6 deberemos de desactivarlo para ello iremos a <strong>Advanced-&gt;IPv6</strong> y en *<em>Mode</em> lo pondremos a <strong>Disable</strong><img alt="IPv6" src="img\\82e34f715904024d.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="ÓPCIONES de BACKUP" duration="0">
+        <p>Una buena medida es hacer backup del router por si pudiera suceder algo y no sabemos que ha sido, poder mantener la configuación hecha. En el apartado <strong>Advanced-&gt;System-&gt;Backup &amp; Restore</strong> podemos hacer un backup tan solo clicando en <strong>BACK UP</strong> y podremos recuperar la configuración en restore, eligiendo el archivo y dando a <strong>RESTORE</strong><img alt="BACKUP" src="img\\dc10bbb06d62977e.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="FIRMWARE" duration="0">
+        <p>Otra medida aconsejable es tener actualizar el firmware del router para ello nos iremos a <strong>Advanced-&gt;System-&gt;Firmware Upgrade</strong>, en este apartado podremos chequear las actualizaciones y actulizar teniendo el arhivo del nuevo firmware. <img alt="Firmware" src="img\\ac76e4d847b82d0b.jpg"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

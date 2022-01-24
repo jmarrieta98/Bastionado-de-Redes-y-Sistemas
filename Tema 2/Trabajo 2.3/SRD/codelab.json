@@ -1,0 +1,26 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-01-24T09:58:05+01:00",
+  "id": "SRD",
+  "duration": 0,
+  "title": "Seguridad en routers domesticos",
+  "summary": "Seguridad en routers domesticos",
+  "source": ".\\Seguridad en routers domesticos.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown",
+    "hardening",
+    "networks"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "SRD"
+}
